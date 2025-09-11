@@ -6,9 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+	
   <ItemGroup>
-    <ProjectReference Include="..\..\harp-engine\HarpEngine\HarpEngine.csproj" />
+    <ProjectReference Include="..\..\..\harp-engine\HarpEngine\HarpEngine.csproj" />
   </ItemGroup>
-
+	
 </Project>

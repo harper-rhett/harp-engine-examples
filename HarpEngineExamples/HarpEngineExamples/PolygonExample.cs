@@ -6,11 +6,11 @@ using HarpEngine.Shapes;
 using HarpEngine.Particles;
 using HarpEngine.Animation;
 
-internal class PolygonTest : Game
+internal class PolygonExample : Game
 {
 	Scene scene = new();
 
-	public PolygonTest()
+	public PolygonExample()
 	{
 		Window.SetResizable(true);
 		Window.SetFullRenderer(Colors.DarkGray);

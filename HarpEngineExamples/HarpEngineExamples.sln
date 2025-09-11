@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolygonTest", "HarpEngineExamples\PolygonTest.csproj", "{FAB9F39E-8BE3-4AF0-B7AA-5BDDB0ED80CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolygonExample", "HarpEngineExamples\PolygonExample.csproj", "{FAB9F39E-8BE3-4AF0-B7AA-5BDDB0ED80CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpEngine", "..\harp-engine\HarpEngine\HarpEngine.csproj", "{F291E22D-CB1C-2753-8394-C796C4E3A8DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireworksExample", "FireworksTest\FireworksExample.csproj", "{3D83CDFE-E1AF-435A-A54B-794E7663A485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireworksTest", "FireworksTest\FireworksTest.csproj", "{3D83CDFE-E1AF-435A-A54B-794E7663A485}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitsExample", "OrbitsTest\OrbitsExample.csproj", "{0D6A1A7B-8199-4898-ABBE-313433DA1E1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitsTest", "OrbitsTest\OrbitsTest.csproj", "{0D6A1A7B-8199-4898-ABBE-313433DA1E1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpEngine", "..\..\harp-engine\HarpEngine\HarpEngine.csproj", "{651439E8-9A23-92FD-ABA8-99F4CB0073FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{FAB9F39E-8BE3-4AF0-B7AA-5BDDB0ED80CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAB9F39E-8BE3-4AF0-B7AA-5BDDB0ED80CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAB9F39E-8BE3-4AF0-B7AA-5BDDB0ED80CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F291E22D-CB1C-2753-8394-C796C4E3A8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F291E22D-CB1C-2753-8394-C796C4E3A8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F291E22D-CB1C-2753-8394-C796C4E3A8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F291E22D-CB1C-2753-8394-C796C4E3A8DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D83CDFE-E1AF-435A-A54B-794E7663A485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D83CDFE-E1AF-435A-A54B-794E7663A485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D83CDFE-E1AF-435A-A54B-794E7663A485}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{0D6A1A7B-8199-4898-ABBE-313433DA1E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D6A1A7B-8199-4898-ABBE-313433DA1E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D6A1A7B-8199-4898-ABBE-313433DA1E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651439E8-9A23-92FD-ABA8-99F4CB0073FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651439E8-9A23-92FD-ABA8-99F4CB0073FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651439E8-9A23-92FD-ABA8-99F4CB0073FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651439E8-9A23-92FD-ABA8-99F4CB0073FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

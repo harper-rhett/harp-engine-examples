@@ -6,5 +6,5 @@ EngineSettings settings = new()
 	GameHeight = 1000
 };
 Engine.Initialize(settings);
-OrbitsTest orbitsTest = new();
+OrbitsExample orbitsTest = new();
 Engine.Start(orbitsTest);

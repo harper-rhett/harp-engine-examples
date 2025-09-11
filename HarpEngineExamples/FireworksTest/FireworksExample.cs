@@ -6,11 +6,11 @@ using HarpEngine.Utilities;
 using System.Numerics;
 using HarpEngine.Animation;
 
-internal class FireworksTest : Game
+internal class FireworksExample : Game
 {
 	private Scene scene = new();
 
-	public FireworksTest()
+	public FireworksExample()
 	{
 		Window.SetResizable(true);
 		Window.SetFullRenderer(Colors.DarkGray);

@@ -4,11 +4,11 @@ using HarpEngine.Graphics;
 using HarpEngine.Shapes;
 using System.Numerics;
 
-internal class OrbitsTest : Game
+internal class OrbitsExample : Game
 {
 	Scene scene = new();
 
-	public OrbitsTest()
+	public OrbitsExample()
 	{
 		Window.SetResizable(true);
 		Window.SetFullRenderer(Colors.DarkGray);

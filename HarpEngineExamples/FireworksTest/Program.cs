@@ -1,5 +1,5 @@
 ﻿using HarpEngine;
 
 Engine.Initialize(new());
-FireworksTest fireworksTest = new();
+FireworksExample fireworksTest = new();
 Engine.Start(fireworksTest);
