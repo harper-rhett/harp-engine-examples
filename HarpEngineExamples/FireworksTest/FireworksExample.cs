@@ -13,7 +13,7 @@ internal class FireworksExample : Game
 	public FireworksExample()
 	{
 		Window.SetResizable(true);
-		Window.SetFullRenderer(Colors.DarkGray);
+		Window.SetRendererUnclipped(Colors.DarkGray);
 
 		FireworkLauncher fireworkLauncher = new(scene);
 		fireworkLauncher.Start();
@@ -26,7 +26,6 @@ internal class FireworksExample : Game
 
 	public override void Draw()
 	{
-		Drawing.Clear(Colors.Black);
 		scene.Draw();
 	}
 }
@@ -36,9 +35,9 @@ internal class FireworkLauncher : FireTimer
 	ParticleEngine2D fireworks;
 	ParticleEngine2D explosions;
 	private const float gravity = 50;
-	private const float reloadTime = 5;
+	private const float reloadTime = 2;
 	private const float launchForce = -150;
-	private const float fireworkRadius = 2;
+	private const float fireworkRadius = 1;
 
 	public FireworkLauncher(Scene scene) : base(scene, reloadTime)
 	{
@@ -47,7 +46,7 @@ internal class FireworkLauncher : FireTimer
 		explosions.AddInitializer(ParticleInitializers.RandomizeLifespan(1, 2));
 		explosions.AddInitializer(ParticleInitializers.RandomizeDirection());
 		explosions.AddInitializer(ParticleInitializers.RandomizeSpeed(25, 50));
-		explosions.AddModifier(ParticleModifiers.AdjustColor(Colors.Red, Colors.Orange.DropAlpha(), Curves.Cubic));
+		explosions.AddModifier(ParticleModifiers.AdjustColor(Colors.SkyBlue, Colors.White.DropAlpha(), Curves.Cubic));
 		explosions.AddModifier(ParticleModifiers.AddVelocity(Vector2.UnitY * gravity));
 		explosions.AddModifier(ParticleModifiers.ApplyMovement());
 

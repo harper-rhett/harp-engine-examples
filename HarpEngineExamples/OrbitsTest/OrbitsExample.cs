@@ -11,7 +11,7 @@ internal class OrbitsExample : Game
 	public OrbitsExample()
 	{
 		Window.SetResizable(true);
-		Window.SetFullRenderer(Colors.DarkGray);
+		Window.SetRendererUnclipped(Colors.DarkGray);
 		new Camera2D(scene);
 
 		CelestialBody sun = new(scene, 75, Colors.Orange);
@@ -32,7 +32,6 @@ internal class OrbitsExample : Game
 
 	public override void Draw()
 	{
-		Drawing.Clear(Colors.Black);
 		scene.Draw();
 	}
 }

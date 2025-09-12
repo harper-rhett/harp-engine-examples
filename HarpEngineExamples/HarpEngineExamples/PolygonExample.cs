@@ -13,7 +13,7 @@ internal class PolygonExample : Game
 	public PolygonExample()
 	{
 		Window.SetResizable(true);
-		Window.SetFullRenderer(Colors.DarkGray);
+		Window.SetRendererUnclipped(Colors.DarkGray);
 		new Camera2D(scene);
 
 		new CustomPolygon(scene, 3, Colors.Green);
@@ -30,7 +30,6 @@ internal class PolygonExample : Game
 
 	public override void Draw()
 	{
-		Drawing.Clear(Colors.Black);
 		scene.Draw();
 	}
 }
@@ -54,8 +53,8 @@ internal class CustomPolygon : Polygon
 		count++;
 
 		// Particles
-		scene.Entities.NextDrawLayer = -1;
 		particleEngine = new(scene);
+		particleEngine.DrawLayer = -1;
 		particleEngine.IsStreaming = true;
 		particleEngine.StreamCooldownTime = 0.01f;
 		particleEngine.StreamFired += StreamParticle;
