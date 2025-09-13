@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\harp-engine\HarpEngine\HarpEngine.csproj" />
+    <PackageReference Include="HarpEngine" Version="0.1.2" />
   </ItemGroup>
 
 </Project>
