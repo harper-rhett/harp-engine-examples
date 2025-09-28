@@ -12,7 +12,7 @@ internal class OrbitsExample : Game
 	{
 		Window.SetResizable(true);
 		Window.SetRendererUnclipped(Colors.DarkGray);
-		new Camera2D(scene);
+		scene.Camera = new Camera2D(scene);
 
 		CelestialBody sun = new(scene, 75, Colors.Orange);
 
