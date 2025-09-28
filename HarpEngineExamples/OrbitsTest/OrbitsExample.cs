@@ -25,9 +25,9 @@ internal class OrbitsExample : Game
 		moon.Transform.LocalPosition = Vector2.UnitX * 100;
 	}
 
-	public override void Update(float frameTime)
+	public override void Update()
 	{
-		scene.Update(frameTime);
+		scene.Update();
 	}
 
 	public override void Draw()
@@ -46,9 +46,9 @@ internal class CelestialBody : Polygon
 		textOffset = new(Radius, -Radius);
 	}
 
-	public override void Update(float frameTime)
+	public override void Update()
 	{
-		Transform.LocalRotation += 10 * frameTime;
+		Transform.LocalRotation += 10 * Engine.FrameTime;
 	}
 
 	public override void Draw()

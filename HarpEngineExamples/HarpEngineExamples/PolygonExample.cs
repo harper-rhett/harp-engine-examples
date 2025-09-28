@@ -21,11 +21,11 @@ internal class PolygonExample : Game
 		new CustomPolygon(scene, 5, Colors.Red);
 	}
 
-	public override void Update(float frameTime)
+	public override void Update()
 	{
 		if (Keyboard.IsKeyPressed(KeyboardKey.Space)) scene.IsPaused = !scene.IsPaused;
 
-		scene.Update(frameTime);
+		scene.Update();
 	}
 
 	public override void Draw()
@@ -66,7 +66,7 @@ internal class CustomPolygon : Polygon
 		particleEngine.AddModifier(ParticleModifiers.AdjustColor(color, color.DropAlpha(), Curves.Linear));
 	}
 
-	public override void Update(float frameTime)
+	public override void Update()
 	{
 		// Movement
 		float rotationOffset = ((float)index / count) * MathF.Tau;

@@ -19,9 +19,9 @@ internal class FireworksExample : Game
 		fireworkLauncher.Start();
 	}
 
-	public override void Update(float frameTime)
+	public override void Update()
 	{
-		scene.Update(frameTime);
+		scene.Update();
 	}
 
 	public override void Draw()
