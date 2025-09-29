@@ -2,9 +2,10 @@
 
 EngineSettings settings = new()
 {
+	WindowName = "Orbits Example",
 	GameWidth = 1000,
 	GameHeight = 1000
 };
 Engine.Initialize(settings);
-OrbitsExample orbitsTest = new();
-Engine.Start(orbitsTest);
+OrbitsExample orbitsExample = new();
+Engine.Start(orbitsExample);

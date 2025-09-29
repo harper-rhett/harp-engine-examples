@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitsExample", "OrbitsTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpEngine", "..\..\harp-engine\HarpEngine\HarpEngine.csproj", "{651439E8-9A23-92FD-ABA8-99F4CB0073FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradientExample", "GradientExample\GradientExample.csproj", "{0B4848F1-98F8-44EA-9418-2F59A45BDEE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{651439E8-9A23-92FD-ABA8-99F4CB0073FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{651439E8-9A23-92FD-ABA8-99F4CB0073FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{651439E8-9A23-92FD-ABA8-99F4CB0073FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4848F1-98F8-44EA-9418-2F59A45BDEE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4848F1-98F8-44EA-9418-2F59A45BDEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4848F1-98F8-44EA-9418-2F59A45BDEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4848F1-98F8-44EA-9418-2F59A45BDEE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
