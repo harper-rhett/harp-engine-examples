@@ -33,12 +33,10 @@ internal class GradientExample : Game
 
 	public override void Draw()
 	{
-		Drawing.Clear(Colors.Red);
-		Primitives.DrawPixel(0, 0, Colors.Black);
 		for (int x = 0; x < Engine.GameWidth; x++)
 		{
 			Color color = gradientOutput[x];
-			Primitives.DrawLine(x, 0, x, Engine.GameHeight, color);
+			Primitives.DrawLine(x + 1, 0, x + 1, Engine.GameHeight, color);
 		}
 	}
 }
