@@ -11,10 +11,7 @@ internal class GradientExample : Game
 	{
 		Window.SetResizable(true);
 
-		gradient = new(Colors.Red, 0);
-		gradient.AddColor(Colors.Yellow, 0.25f);
-		gradient.AddColor(Colors.Green, 0.75f);
-		gradient.AddColor(Colors.Blue, 1.0f);
+		gradient = new(Colors.Red, Colors.Yellow, Colors.Green, Colors.Blue);
 
 		gradientOutput = new Color[Engine.GameWidth];
 		for (int x = 0; x < Engine.GameWidth; x++)

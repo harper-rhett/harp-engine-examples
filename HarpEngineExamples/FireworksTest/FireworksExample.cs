@@ -43,21 +43,21 @@ internal class FireworkLauncher : FireTimer
 	{
 		explosions = new(scene);
 		explosions.RenderAsCircle(1);
+		explosions.AddInitializer(ParticleInitializers.SetColors(Colors.SkyBlue, Colors.White.DropAlpha()));
 		explosions.AddInitializer(ParticleInitializers.RandomizeLifespan(1, 2));
 		explosions.AddInitializer(ParticleInitializers.RandomizeDirection());
 		explosions.AddInitializer(ParticleInitializers.RandomizeSpeed(25, 50));
-		explosions.AddModifier(ParticleModifiers.AdjustColor(Colors.SkyBlue, Colors.White.DropAlpha(), Curves.Cubic));
 		explosions.AddModifier(ParticleModifiers.AddVelocity(Vector2.UnitY * gravity));
 		explosions.AddModifier(ParticleModifiers.ApplyMovement());
 
 		fireworks = new(scene);
 		fireworks.RenderAsCircle(fireworkRadius);
+		fireworks.AddInitializer(ParticleInitializers.SetColors(Colors.Red, Colors.White));
 		fireworks.AddInitializer(ParticleInitializers.ConicDirection(Vector2.UnitY, 15));
 		fireworks.AddInitializer(ParticleInitializers.SetSpeed(launchForce));
 		fireworks.AddInitializer(ParticleInitializers.OverrideLifespan(3));
 		fireworks.AddModifier(ParticleModifiers.AddVelocity(Vector2.UnitY * gravity));
 		fireworks.AddModifier(ParticleModifiers.ApplyMovement());
-		fireworks.AddModifier(ParticleModifiers.AdjustColor(Colors.Red, Colors.White, Curves.Linear));
 		fireworks.AddFinalizer(ParticleFinalizers.CreateBurst(explosions, 50));
 	}
 
