@@ -59,11 +59,11 @@ internal class CustomPolygon : Polygon
 		particleEngine.StreamCooldownTime = 0.01f;
 		particleEngine.StreamFired += StreamParticle;
 		particleEngine.RenderAsPixel();
+		particleEngine.AddInitializer(ParticleInitializers.SetColors(Color, Color.DropAlpha()));
 		particleEngine.AddInitializer(ParticleInitializers.RandomizeDirection());
 		particleEngine.AddInitializer(ParticleInitializers.ScatterByDirection(radius / 2f));
 		particleEngine.AddInitializer(ParticleInitializers.SetSpeed(15));
 		particleEngine.AddModifier(ParticleModifiers.ApplyMovement());
-		particleEngine.AddModifier(ParticleModifiers.AdjustColor(color, color.DropAlpha(), Curves.Linear));
 	}
 
 	public override void Update()
@@ -81,7 +81,6 @@ internal class CustomPolygon : Polygon
 		particleTemplate = new()
 		{
 			Position = Transform.WorldPosition,
-			Color = Color,
 			Lifespan = 1
 		};
 	}
