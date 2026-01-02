@@ -1,5 +1,6 @@
 ﻿using Clockwork;
 using Clockwork.Graphics;
+using Clockwork.Graphics.Draw2D;
 using Clockwork.Windowing;
 
 internal class GradientExample : Game
