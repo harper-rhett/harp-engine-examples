@@ -1,6 +1,5 @@
 ﻿using Clockwork;
 using Clockwork.Graphics;
-using Clockwork.Graphics.Draw2D;
 using Clockwork.Windowing;
 
 internal class GradientExample : Game
@@ -33,7 +32,7 @@ internal class GradientExample : Game
 		for (int x = 0; x < Engine.GameWidth; x++)
 		{
 			Color color = gradientOutput[x];
-			Primitives.DrawLine(x + 1, 0, x + 1, Engine.GameHeight, color);
+			Primitives.DrawLine(x + 1, 0, x + 1, Engine.GameHeight, 1, color);
 		}
 	}
 }

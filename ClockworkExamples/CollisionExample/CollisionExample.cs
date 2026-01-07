@@ -11,7 +11,7 @@ internal class CollisionExample : Game
 
 	public CollisionExample()
 	{
-		Window.SetRendererUnclipped(Colors.Gray);
+		WindowRenderer.SetUnclipped(Colors.Gray);
 		Window.SetResizable(true);
 	}
 

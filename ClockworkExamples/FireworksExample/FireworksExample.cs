@@ -13,7 +13,7 @@ internal class FireworksExample : Game
 	public FireworksExample()
 	{
 		Window.SetResizable(true);
-		Window.SetRendererUnclipped(Colors.DarkGray);
+		WindowRenderer.SetUnclipped(Colors.DarkGray);
 
 		FireworkLauncher fireworkLauncher = new();
 		fireworkLauncher.Start();

@@ -1,7 +1,6 @@
 ﻿using Clockwork;
 using Clockwork.Windowing;
 using Clockwork.Graphics;
-using Clockwork.Graphics.Text;
 using Clockwork.Shapes;
 using System.Numerics;
 
@@ -12,7 +11,7 @@ internal class OrbitsExample : Game
 	public OrbitsExample()
 	{
 		Window.SetResizable(true);
-		Window.SetRendererUnclipped(Colors.DarkGray);
+		WindowRenderer.SetUnclipped(Colors.DarkGray);
 		scene.Camera = scene.AddEntity(new Camera2D());
 
 		CelestialBody sun = scene.AddEntity(new CelestialBody(75, Colors.Orange));
