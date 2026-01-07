@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockworkEngine", "..\..\clockwork-engine\ClockworkEngine\ClockworkEngine.csproj", "{C5E5EF12-BDB3-FEE3-7DDF-9BA7E56FA678}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockworkBackend", "..\..\clockwork-backend\ClockworkBackend\ClockworkBackend\ClockworkBackend.csproj", "{E7C3E56D-9A53-6CDA-4016-C600A70CE253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockworkRaylib", "..\..\clockwork-raylib\ClockworkRaylib\ClockworkRaylib\ClockworkRaylib.csproj", "{9324EE19-AFDD-C6D8-B551-260935BD424A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,14 @@ Global
 		{C5E5EF12-BDB3-FEE3-7DDF-9BA7E56FA678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5E5EF12-BDB3-FEE3-7DDF-9BA7E56FA678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5E5EF12-BDB3-FEE3-7DDF-9BA7E56FA678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C3E56D-9A53-6CDA-4016-C600A70CE253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C3E56D-9A53-6CDA-4016-C600A70CE253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C3E56D-9A53-6CDA-4016-C600A70CE253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C3E56D-9A53-6CDA-4016-C600A70CE253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9324EE19-AFDD-C6D8-B551-260935BD424A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9324EE19-AFDD-C6D8-B551-260935BD424A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9324EE19-AFDD-C6D8-B551-260935BD424A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9324EE19-AFDD-C6D8-B551-260935BD424A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

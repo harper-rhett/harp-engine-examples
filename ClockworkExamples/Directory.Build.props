@@ -1,7 +1,9 @@
 <Project>
 	<PropertyGroup>
 		<UseLocalEngine>true</UseLocalEngine>
-		<LocalEnginePath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkEngine.csproj</LocalEnginePath>
+		<ClockworkEnginePath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkEngine.csproj</ClockworkEnginePath>
+		<ClockworkBackendPath>..\..\..\clockwork-backend\ClockworkBackend\ClockworkBackend\ClockworkBackend.csproj</ClockworkBackendPath>
+		<ClockworkRaylibPath>..\..\..\clockwork-raylib\ClockworkRaylib\ClockworkRaylib\ClockworkRaylib.csproj</ClockworkRaylibPath>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(UseLocalEngine)' == 'false'">
@@ -9,6 +11,8 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(UseLocalEngine)' == 'true'">
-		<ProjectReference Include="$(LocalEnginePath)" />
+		<ProjectReference Include="$(ClockworkEnginePath)" />
+		<ProjectReference Include="$(ClockworkBackendPath)"/>
+		<ProjectReference Include="$(ClockworkRaylibPath)"/>
 	</ItemGroup>
 </Project>

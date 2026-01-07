@@ -13,7 +13,7 @@ internal class PolygonExample : Game
 	public PolygonExample()
 	{
 		Window.SetResizable(true);
-		Window.SetRendererUnclipped(Colors.DarkGray);
+		WindowRenderer.SetUnclipped(Colors.DarkGray);
 		scene.Camera = new Camera2D();
 
 		scene.AddEntity(new CustomPolygon(3, Colors.Green));
