@@ -1,8 +1,8 @@
 <Project>
 	<PropertyGroup>
 		<UseLocalEngine>true</UseLocalEngine>
-		<ClockworkEnginePath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkEngine.csproj</ClockworkEnginePath>
-		<ClockworkBackendPath>..\..\..\clockwork-backend\ClockworkBackend\ClockworkBackend\ClockworkBackend.csproj</ClockworkBackendPath>
+		<ClockworkEnginePath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkEngine\ClockworkEngine.csproj</ClockworkEnginePath>
+		<ClockworkBackendPath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkBackend\ClockworkBackend.csproj</ClockworkBackendPath>
 		<ClockworkRaylibPath>..\..\..\clockwork-raylib\ClockworkRaylib\ClockworkRaylib\ClockworkRaylib.csproj</ClockworkRaylibPath>
 	</PropertyGroup>
 
