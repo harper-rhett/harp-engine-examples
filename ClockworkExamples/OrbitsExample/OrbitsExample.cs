@@ -12,7 +12,7 @@ internal class OrbitsExample : Game
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
-		scene.Camera = scene.AddEntity(new Camera2D());
+		scene.Camera = scene.AddEntity(new Camera2DEntity());
 
 		CelestialBody sun = scene.AddEntity(new CelestialBody(75, Colors.Orange));
 

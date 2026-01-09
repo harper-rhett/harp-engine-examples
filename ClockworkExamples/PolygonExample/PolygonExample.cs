@@ -14,7 +14,7 @@ internal class PolygonExample : Game
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
-		scene.Camera = new Camera2D();
+		scene.Camera = new Camera2DEntity();
 
 		scene.AddEntity(new CustomPolygon(3, Colors.Green));
 		scene.AddEntity(new CustomPolygon(4, Colors.Blue));
