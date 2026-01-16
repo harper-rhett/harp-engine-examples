@@ -22,7 +22,7 @@ internal class RectangleCollider : RectangleShape, ICollider
 	public override void OnUpdate()
 	{
 		if (IsSelected) Color = IsSelected ? Colors.Green : Colors.Blue;
-		else Color = IsCollidedWith ? Colors.SkyBlue : Colors.Blue;
+		else Color = IsCollidedWith ? Colors.Cyan : Colors.Blue;
 	}
 
 	public bool IsColliding(out ICollider otherCollider)

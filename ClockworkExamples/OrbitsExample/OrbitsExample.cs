@@ -18,7 +18,7 @@ public class OrbitsExample : Game
 
 		CelestialBody sun = scene.AddEntity(new CelestialBody(75, Colors.Orange));
 
-		CelestialBody earth = scene.AddEntity(new CelestialBody(25, Colors.SkyBlue));
+		CelestialBody earth = scene.AddEntity(new CelestialBody(25, Colors.Cyan));
 		earth.Transform.Parent = sun.Transform;
 		earth.Transform.LocalPosition = Vector2.UnitX * 250;
 

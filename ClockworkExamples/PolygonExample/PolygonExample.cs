@@ -16,7 +16,7 @@ public class PolygonExample : Game
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
 		scene.Camera = new Camera2DEntity();
 
-		scene.AddEntity(new CustomPolygon(3, Colors.Green));
+		scene.AddEntity(new CustomPolygon(3, Colors.Lime));
 		scene.AddEntity(new CustomPolygon(4, Colors.Blue));
 		scene.AddEntity(new CustomPolygon(5, Colors.Red));
 	}

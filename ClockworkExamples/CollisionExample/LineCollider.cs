@@ -36,7 +36,7 @@ internal class LineCollider : LineShape, ICollider
 	public override void OnUpdate()
 	{
 		if (IsSelected) Color = IsSelected ? Colors.Green : Colors.Blue;
-		else Color = IsCollidedWith ? Colors.SkyBlue : Colors.Blue;
+		else Color = IsCollidedWith ? Colors.Cyan : Colors.Blue;
 	}
 
 	bool ICollider.IsColliding(out ICollider otherCollider)
