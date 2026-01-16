@@ -4,13 +4,12 @@ using Clockwork.Graphics;
 using Clockwork.Particles;
 using Clockwork.Utilities;
 using System.Numerics;
-using Clockwork.Animation;
 
 internal class FireworksExample : Game
 {
 	private Scene scene = new();
 
-	public FireworksExample()
+	public FireworksExample() : base("Fireworks Example", 256, 256)
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
@@ -36,7 +35,7 @@ internal class FireworkLauncher : FireTimer
 	private ParticleEngine2D fireworks;
 	private ParticleEngine2D explosions;
 
-	private Color[] colors = new Color[]
+	private Color[] colors =
 	{
 		Colors.Red,
 		Colors.Blue,

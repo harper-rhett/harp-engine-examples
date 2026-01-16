@@ -4,13 +4,13 @@ using Clockwork.Graphics;
 using Clockwork.Input;
 using Clockwork.Shapes;
 using Clockwork.Particles;
-using Clockwork.Animation;
+using Clockwork.Graphics.Draw2D;
 
 internal class PolygonExample : Game
 {
 	Scene scene = new();
 
-	public PolygonExample()
+	public PolygonExample() : base("Polygon Example", 256, 256)
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);

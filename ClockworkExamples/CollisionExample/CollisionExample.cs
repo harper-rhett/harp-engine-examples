@@ -1,16 +1,14 @@
 ﻿using Clockwork;
 using Clockwork.Graphics;
-using Clockwork.Input;
-using Clockwork.Shapes;
-using Clockwork.Utilities;
 using Clockwork.Windowing;
 
 internal class CollisionExample : Game
 {
-	private CollisionScene collisionScene = new();
+	private CollisionScene collisionScene;
 
-	public CollisionExample()
+	public CollisionExample() : base("Collision Example", 500, 500)
 	{
+		collisionScene = new();
 		WindowRenderer.SetUnclipped(Colors.Gray);
 		Window.SetResizable(true);
 	}
