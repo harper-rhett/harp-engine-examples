@@ -6,7 +6,7 @@ using Clockwork.Shapes;
 using Clockwork.Particles;
 using Clockwork.Graphics.Draw2D;
 
-internal class PolygonExample : Game
+public class PolygonExample : Game
 {
 	Scene scene = new();
 

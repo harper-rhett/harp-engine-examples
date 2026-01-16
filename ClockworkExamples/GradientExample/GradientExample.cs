@@ -3,7 +3,7 @@ using Clockwork.Graphics;
 using Clockwork.Windowing;
 using Clockwork.Graphics.Draw2D;
 
-internal class GradientExample : Game
+public class GradientExample : Game
 {
 	private Gradient gradient;
 	private Color[] gradientOutput;

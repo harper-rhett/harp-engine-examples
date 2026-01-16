@@ -6,7 +6,7 @@ using System.Numerics;
 using Clockwork.Graphics.Text;
 using Clockwork.Graphics.Draw2D;
 
-internal class OrbitsExample : Game
+public class OrbitsExample : Game
 {
 	Scene scene = new();
 

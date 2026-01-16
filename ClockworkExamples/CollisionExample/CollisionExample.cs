@@ -2,7 +2,7 @@
 using Clockwork.Graphics;
 using Clockwork.Windowing;
 
-internal class CollisionExample : Game
+public class CollisionExample : Game
 {
 	private CollisionScene collisionScene;
 

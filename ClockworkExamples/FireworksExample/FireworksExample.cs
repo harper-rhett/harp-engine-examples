@@ -5,7 +5,7 @@ using Clockwork.Particles;
 using Clockwork.Utilities;
 using System.Numerics;
 
-internal class FireworksExample : Game
+public class FireworksExample : Game
 {
 	private Scene scene = new();
 
