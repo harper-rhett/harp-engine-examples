@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockworkEngine", "..\..\cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockworkBackend", "..\..\clockwork-engine\ClockworkEngine\ClockworkBackend\ClockworkBackend.csproj", "{55576AEC-026C-4C18-DB8E-F9704D13FC93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primitives3DExample", "Primitives3DExample\Primitives3DExample.csproj", "{7FE6B02F-C517-4607-87D0-0082777E9F75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{55576AEC-026C-4C18-DB8E-F9704D13FC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55576AEC-026C-4C18-DB8E-F9704D13FC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55576AEC-026C-4C18-DB8E-F9704D13FC93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE6B02F-C517-4607-87D0-0082777E9F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE6B02F-C517-4607-87D0-0082777E9F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE6B02F-C517-4607-87D0-0082777E9F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE6B02F-C517-4607-87D0-0082777E9F75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
