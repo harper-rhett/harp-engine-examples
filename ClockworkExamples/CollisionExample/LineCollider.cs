@@ -28,15 +28,15 @@ internal class LineCollider : LineShape, ICollider
 		}
 	}
 
-	public LineCollider(CollisionScene collisionScene, float thickness) : base(thickness, Colors.Blue)
+	public LineCollider(CollisionScene collisionScene, float thickness) : base(thickness, CollisionScene.StaticColor)
 	{
 		this.collisionScene = collisionScene;
 	}
 
 	public override void OnUpdate()
 	{
-		if (IsSelected) Color = IsSelected ? Colors.Green : Colors.Blue;
-		else Color = IsCollidedWith ? Colors.Cyan : Colors.Blue;
+		if (IsSelected) Color = IsSelected ? CollisionScene.SelectedCollisionColor : CollisionScene.StaticColor;
+		else Color = IsCollidedWith ? CollisionScene.StaticCollisionColor : CollisionScene.StaticColor;
 	}
 
 	bool ICollider.IsColliding(out ICollider otherCollider)
@@ -51,7 +51,7 @@ internal class LineCollider : LineShape, ICollider
 			isCollision = isCollision || doesCollide;
 			if (doesCollide) otherCollider = collider;
 		}
-		Color = isCollision ? Colors.Green : Colors.Lime;
+		Color = isCollision ? CollisionScene.SelectedCollisionColor : CollisionScene.SelectedColor;
 		return isCollision;
 	}
 }
