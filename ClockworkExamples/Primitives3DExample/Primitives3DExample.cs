@@ -17,7 +17,7 @@ public class Primitives3DExample : Game
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetClipped();
-		Camera = scene.AddEntity(new Camera3D());
+		Camera = scene.AddEntity(new FreeCamera3D());
 		scene.Camera = Camera;
 
 		for (int cubeIndex = 0; cubeIndex < cubeCount; cubeIndex++)

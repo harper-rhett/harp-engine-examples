@@ -14,6 +14,11 @@ public class RainbowCube : Entity
 		Position = position;
 	}
 
+	public override void OnDrawGUI()
+	{
+		Position += Vector3.UnitX * Engine.FrameTime;
+	}
+
 	public override void OnDraw()
 	{
 		float interpolation = (Scene.Time % rainbowSeconds) / rainbowSeconds;
