@@ -6,19 +6,20 @@ using Clockwork.Utilities;
 
 public class Primitives3DExample : Game
 {
-	private Camera3DEntity Camera;
+	private Camera3D Camera;
 	private Scene scene = new();
 	private const int cubeCount = 100;
-	private const int maxDistance = 15;
+	private const float minDistance = 5;
+	private const float maxDistance = 15;
 
 	public Primitives3DExample() : base("Primitives 3D Example", 1920, 1080)
 	{
-		//Camera = scene.AddEntity();
-		scene.Camera = new Camera3DEntity();
+		Camera = scene.AddEntity(new Camera3D());
+		scene.Camera = Camera;
 
 		for (int cubeIndex = 0; cubeIndex < cubeCount; cubeIndex++)
 		{
-			Vector3 cubePosition = Generate.UnitVector3() * Generate.Float(maxDistance);
+			Vector3 cubePosition = Generate.UnitVector3() * Generate.Float(minDistance, maxDistance);
 			scene.AddEntity(new RainbowCube(cubePosition));
 		}
 	}

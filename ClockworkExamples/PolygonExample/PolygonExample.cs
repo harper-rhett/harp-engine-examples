@@ -4,7 +4,6 @@ using Clockwork.Graphics;
 using Clockwork.Input;
 using Clockwork.Shapes;
 using Clockwork.Particles;
-using Clockwork.Graphics.Draw2D;
 
 public class PolygonExample : Game
 {
@@ -14,7 +13,7 @@ public class PolygonExample : Game
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
-		scene.Camera = new Camera2DEntity();
+		scene.Camera = new Camera2D();
 
 		scene.AddEntity(new CustomPolygon(3, Colors.Lime));
 		scene.AddEntity(new CustomPolygon(4, Colors.Blue));
