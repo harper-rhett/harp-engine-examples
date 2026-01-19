@@ -14,15 +14,15 @@ internal class RectangleCollider : RectangleShape, ICollider
 		set => Transform.WorldPosition = value;
 	}
 
-	public RectangleCollider(CollisionScene collisionScene, int width, int height) : base(width, height, Colors.Blue)
+	public RectangleCollider(CollisionScene collisionScene, int width, int height) : base(width, height, CollisionScene.StaticColor)
 	{
 		this.collisionScene = collisionScene;
 	}
 
 	public override void OnUpdate()
 	{
-		if (IsSelected) Color = IsSelected ? Colors.Green : Colors.Blue;
-		else Color = IsCollidedWith ? Colors.Cyan : Colors.Blue;
+		if (IsSelected) Color = IsSelected ? CollisionScene.SelectedCollisionColor : CollisionScene.StaticColor;
+		else Color = IsCollidedWith ? CollisionScene.StaticCollisionColor : CollisionScene.StaticColor;
 	}
 
 	public bool IsColliding(out ICollider otherCollider)
@@ -37,7 +37,7 @@ internal class RectangleCollider : RectangleShape, ICollider
 			isCollision = isCollision || doesCollide;
 			if (doesCollide) otherCollider = collider;
 		}
-		Color = isCollision ? Colors.Green : Colors.Lime;
+		Color = isCollision ? CollisionScene.SelectedCollisionColor : CollisionScene.SelectedColor;
 		return isCollision;
 	}
 }

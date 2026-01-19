@@ -14,15 +14,15 @@ internal class CircleCollider : CircleShape, ICollider
 		set => Transform.WorldPosition = value;
 	}
 
-	public CircleCollider(CollisionScene collisionScene, float radius) : base(radius, Colors.Blue)
+	public CircleCollider(CollisionScene collisionScene, float radius) : base(radius, CollisionScene.StaticColor)
 	{
 		this.collisionScene = collisionScene;
 	}
 
 	public override void OnUpdate()
 	{
-		if (IsSelected) Color = IsSelected ? Colors.Green : Colors.Blue;
-		else Color = IsCollidedWith ? Colors.Cyan : Colors.Blue;
+		if (IsSelected) Color = IsSelected ? CollisionScene.SelectedCollisionColor : CollisionScene.StaticColor;
+		else Color = IsCollidedWith ? CollisionScene.StaticCollisionColor : CollisionScene.StaticColor;
 	}
 
 	public bool IsColliding(out ICollider otherCollider)
@@ -37,7 +37,7 @@ internal class CircleCollider : CircleShape, ICollider
 			isCollision = isCollision || doesCollide;
 			if (doesCollide) otherCollider = collider;
 		}
-		Color = isCollision ? Colors.Green : Colors.Lime;
+		Color = isCollision ? CollisionScene.SelectedCollisionColor : CollisionScene.SelectedColor;
 		return isCollision;
 	}
 }

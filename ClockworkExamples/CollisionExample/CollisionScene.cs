@@ -1,4 +1,5 @@
 ﻿using Clockwork;
+using Clockwork.Graphics;
 using Clockwork.Utilities;
 using System.Numerics;
 
@@ -7,6 +8,10 @@ internal class CollisionScene : Scene
 	public ICollider[] Colliders = new ICollider[25];
 	private const int MinimumSize = 25;
 	private const int MaximumSize = 50;
+	public static Color StaticColor = Colors.Blue;
+	public static Color StaticCollisionColor = Colors.Cyan;
+	public static Color SelectedColor = Colors.Green;
+	public static Color SelectedCollisionColor = Colors.Lime;
 
 	public CollisionScene()
 	{
