@@ -16,7 +16,7 @@ public class RainbowCube : Entity
 
 	public override void OnDrawGUI()
 	{
-		Position += Vector3.UnitX * Engine.FrameTime;
+		Position += Vector3.UnitY * Engine.FrameTime;
 	}
 
 	public override void OnDraw()
