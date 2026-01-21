@@ -5,6 +5,7 @@ using System.Numerics;
 using Clockwork.Utilities;
 using Clockwork.Windowing;
 using Clockwork.Raylib.Graphics;
+using Clockwork.Input;
 
 public class Primitives3DExample : Game
 {
@@ -13,6 +14,8 @@ public class Primitives3DExample : Game
 	private const int cubeCount = 150;
 	private const float minDistance = 5;
 	private const float maxDistance = 15;
+
+	private RaylibCamera3D raylibCamera;
 
 	public Primitives3DExample() : base("Primitives 3D Example", 1920, 1080)
 	{
@@ -31,6 +34,11 @@ public class Primitives3DExample : Game
 	public override void OnUpdate()
 	{
 		scene.Update();
+		if (Keyboard.IsKeyDown(KeyboardKey.D))
+		{
+			raylibCamera.Position += Vector3.UnitX * Engine.FrameTime;
+			raylibCamera.Target = raylibCamera.Position + Vector3.UnitZ;
+		}
 	}
 
 	public override void OnDraw()
