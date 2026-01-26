@@ -39,7 +39,7 @@ internal class FireworkLauncher : FireTimer
 	{
 		Colors.Red,
 		Colors.Blue,
-		Colors.Green,
+		Colors.Lime,
 		Colors.Yellow,
 	};
 
