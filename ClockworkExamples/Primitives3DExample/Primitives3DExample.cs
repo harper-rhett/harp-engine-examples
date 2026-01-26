@@ -4,7 +4,6 @@ using Clockwork.Graphics;
 using System.Numerics;
 using Clockwork.Utilities;
 using Clockwork.Windowing;
-using Clockwork.Raylib.Graphics;
 using Clockwork.Input;
 
 public class Primitives3DExample : Game
