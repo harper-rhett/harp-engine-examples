@@ -15,13 +15,11 @@ public class Primitives3DExample : Game
 	private const float minDistance = 5;
 	private const float maxDistance = 15;
 
-	private RaylibCamera3D raylibCamera;
-
 	public Primitives3DExample() : base("Primitives 3D Example", 1920, 1080)
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetClipped();
-		Camera = scene.AddEntity(new FreeCamera3D());
+		Camera = scene.AddEntity(new FreeCamera3D(Vector3.Zero));
 		scene.Camera = Camera;
 
 		for (int cubeIndex = 0; cubeIndex < cubeCount; cubeIndex++)
@@ -34,11 +32,6 @@ public class Primitives3DExample : Game
 	public override void OnUpdate()
 	{
 		scene.Update();
-		if (Keyboard.IsKeyDown(KeyboardKey.D))
-		{
-			raylibCamera.Position += Vector3.UnitX * Engine.FrameTime;
-			raylibCamera.Target = raylibCamera.Position + Vector3.UnitZ;
-		}
 	}
 
 	public override void OnDraw()
