@@ -1,6 +1,7 @@
 ﻿using Clockwork;
 using Clockwork.Graphics.Draw3D;
 using System.Numerics;
+using Clockwork.Utilities;
 
 public class DisplayMesh : Entity
 {
@@ -15,6 +16,6 @@ public class DisplayMesh : Entity
 
 	public override void OnDraw()
 	{
-		Mesh.Draw(mesh, new(), new(position, Quaternion.Identity));
+		mesh.Draw(new Material(), new Transform3D(position, Quaternion.Identity));
 	}
 }
