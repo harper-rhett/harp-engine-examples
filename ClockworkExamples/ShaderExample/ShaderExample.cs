@@ -10,7 +10,7 @@ public class ShaderExample : Game
 	public ShaderExample() : base("Shader Example", 500, 500)
 	{
 		Camera3D camera = scene.AddEntity(new Camera3D(new Vector3(1, 1, 1)));
-		camera.Transform.WorldPosition = new(0, 0, -2);
+		camera.Transform.WorldPosition = new(0, 0, 0);
 		scene.AddEntity(new DisplayMesh(Mesh.GenerateSphere(0.5f, 12, 12), Vector3.Zero));
 	}
 
