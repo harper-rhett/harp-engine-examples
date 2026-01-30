@@ -1,17 +1,21 @@
 ﻿using Clockwork;
 using Clockwork.Graphics;
 using Clockwork.Graphics.Draw3D;
+using Clockwork.Shapes;
+using Clockwork.Utilities;
 using System.Numerics;
 
 public class ShaderExample : Game
 {
 	private Scene scene = new();
+	private Camera3D camera;
 
 	public ShaderExample() : base("Shader Example", 500, 500)
 	{
-		Camera3D camera = scene.AddEntity(new Camera3D(new Vector3(1, 1, 1)));
-		camera.Transform.WorldPosition = new(0, 0, 0);
-		scene.AddEntity(new DisplayMesh(Mesh.GenerateSphere(0.5f, 12, 12), Vector3.Zero));
+		camera = scene.AddEntity(new Camera3D(new Vector3(0, 0, 3)));
+		camera.InternalCamera.Target = Vector3.Zero;
+		scene.Camera = camera;
+		scene.AddEntity(new SphereShape(Vector3.Zero, 0.5f));
 	}
 
 	public override void OnUpdate()
