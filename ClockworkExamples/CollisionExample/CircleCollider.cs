@@ -1,18 +1,10 @@
-﻿using Clockwork.Graphics;
-using Clockwork.Shapes;
-using System.Numerics;
+﻿using Clockwork.Shapes;
 
 internal class CircleCollider : CircleShape, ICollider
 {
 	private CollisionScene collisionScene;
 	public bool IsSelected { get; set; }
 	public bool IsCollidedWith { get; set; }
-
-	public Vector2 Position
-	{
-		get => Transform.WorldPosition;
-		set => Transform.WorldPosition = value;
-	}
 
 	public CircleCollider(CollisionScene collisionScene, float radius) : base(radius, CollisionScene.StaticColor)
 	{

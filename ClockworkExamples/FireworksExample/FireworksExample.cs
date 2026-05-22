@@ -9,14 +9,14 @@ public class FireworksExample : Game
 {
 	private Scene scene = new();
 
-	public FireworksExample() : base("Fireworks Example", 256, 256)
+	public FireworksExample()
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
 
 		FireworkLauncher fireworkLauncher = new();
-		fireworkLauncher.Start();
 		scene.AddEntity(fireworkLauncher);
+		fireworkLauncher.Start();
 	}
 
 	public override void OnUpdate()

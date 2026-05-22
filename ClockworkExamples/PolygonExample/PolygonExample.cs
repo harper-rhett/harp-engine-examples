@@ -2,12 +2,13 @@
 using Clockwork.Windowing;
 using Clockwork.Graphics;
 using Clockwork.Input;
+using Clockwork.Graphics.Cameras;
 
 public class PolygonExample : Game
 {
 	Scene scene = new();
 
-	public PolygonExample() : base("Polygon Example", 256, 256)
+	public PolygonExample()
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);

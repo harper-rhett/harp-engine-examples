@@ -1,10 +1,8 @@
 ﻿using Clockwork;
-using Clockwork.Graphics.Draw3D;
-using Clockwork.Graphics;
 using System.Numerics;
 using Clockwork.Utilities;
 using Clockwork.Windowing;
-using Clockwork.Input;
+using Clockwork.Graphics.Cameras;
 
 public class Primitives3DExample : Game
 {
@@ -14,7 +12,7 @@ public class Primitives3DExample : Game
 	private const float minDistance = 5;
 	private const float maxDistance = 15;
 
-	public Primitives3DExample() : base("Primitives 3D Example", 1920, 1080)
+	public Primitives3DExample()
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetClipped();

@@ -4,13 +4,13 @@ using Clockwork.Graphics;
 using Clockwork.Shapes;
 using System.Numerics;
 using Clockwork.Graphics.Text;
-using Clockwork.Graphics.Draw2D;
+using Clockwork.Graphics.Cameras;
 
 public class OrbitsExample : Game
 {
 	Scene scene = new();
 
-	public OrbitsExample() : base("Orbits Example", 1000, 1000)
+	public OrbitsExample()
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);

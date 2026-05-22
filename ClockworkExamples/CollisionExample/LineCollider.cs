@@ -1,6 +1,4 @@
-﻿using Clockwork;
-using Clockwork.Graphics;
-using Clockwork.Shapes;
+﻿using Clockwork.Shapes;
 using System.Numerics;
 
 internal class LineCollider : LineShape, ICollider
@@ -12,11 +10,19 @@ internal class LineCollider : LineShape, ICollider
 	private Vector2 endOffset;
 	public Vector2 Position
 	{
-		get => StartPosition;
+		get => base.StartPosition;
 		set
 		{
-			StartPosition = value;
-			base.EndPosition = StartPosition + endOffset;
+			base.StartPosition = value;
+			base.EndPosition = base.StartPosition + endOffset;
+		}
+	}
+	public new Vector2 StartPosition
+	{
+		set
+		{
+			base.StartPosition = value;
+			endOffset = base.EndPosition - base.StartPosition;
 		}
 	}
 	public new Vector2 EndPosition
@@ -24,7 +30,7 @@ internal class LineCollider : LineShape, ICollider
 		set
 		{
 			base.EndPosition = value;
-			endOffset = base.EndPosition - StartPosition;
+			endOffset = base.EndPosition - base.StartPosition;
 		}
 	}
 
