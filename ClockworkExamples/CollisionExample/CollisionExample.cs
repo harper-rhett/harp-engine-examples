@@ -6,7 +6,7 @@ public class CollisionExample : Game
 {
 	private CollisionScene collisionScene;
 
-	public CollisionExample() : base("Collision Example", 500, 500)
+	public CollisionExample()
 	{
 		collisionScene = new();
 		WindowRenderer.SetUnclipped(Colors.Gray);

@@ -8,7 +8,7 @@ public class GradientExample : Game
 	private Gradient gradient;
 	private Color[] gradientOutput;
 
-	public GradientExample() : base("Gradient Example", 64, 64)
+	public GradientExample()
 	{
 		Window.SetResizable(true);
 
