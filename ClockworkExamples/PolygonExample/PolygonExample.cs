@@ -22,7 +22,9 @@ public class PolygonExample : Game
 	public override void OnUpdate()
 	{
 		if (Keyboard.IsKeyPressed(KeyboardKey.Space)) scene.IsPaused = !scene.IsPaused;
-		
+		else if (Keyboard.IsKeyPressed(KeyboardKey.Right)) scene.TimeModifier += 0.5f;
+		else if (Keyboard.IsKeyPressed(KeyboardKey.Left)) scene.TimeModifier = float.Min(0.5f, scene.TimeModifier - 0.5f);
+
 		scene.Update();
 	}
 

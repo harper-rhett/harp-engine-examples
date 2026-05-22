@@ -42,9 +42,9 @@ public class CustomPolygon : PolygonShape
 	public override void OnUpdate()
 	{
 		// Movement
-		float rotationOffset = ((float)index / count) * MathF.Tau;
-		float x = MathF.Cos(Scene.Time + rotationOffset) * 64;
-		float y = MathF.Sin(Scene.Time + rotationOffset) * 64;
+		float rotationOffset = ((float)index / count) * float.Tau;
+		float x = float.Cos(Scene.Time + rotationOffset) * 64;
+		float y = float.Sin(Scene.Time + rotationOffset) * 64;
 		Transform.WorldRotation = Scene.Time * -100f;
 		Transform.WorldPosition = new(x, y);
 	}
