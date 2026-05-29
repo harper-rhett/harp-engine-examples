@@ -50,7 +50,7 @@ public class QuadtreeExample : Game
 		foreach (Vector2 point in points)
 		{
 			quadtreePoints.Clear();
-			quadtree.CollectItemsInRadius(point, searchRadius, quadtreePoints);
+			quadtree.QueryItems(point, searchRadius, searchRadiusSquared, quadtreePoints);
 		}
 		stopwatch.Stop();
 		quadtreeMilliseconds.Enqueue(stopwatch.ElapsedMilliseconds);
@@ -82,9 +82,9 @@ public class QuadtreeExample : Game
 		Primitives2D.DrawCircleLines(mousePosition, searchRadius, 2, Colors.Blue);
 
 		List<Rectangle> intersectingBounds = new();
-		quadtree.CollectBoundsIntersectingRadius(mousePosition, searchRadius, intersectingBounds);
+		quadtree.QueryBounds(mousePosition, searchRadius, intersectingBounds);
 		List<Vector2> mousePoints = new();
-		quadtree.CollectItemsInRadius(mousePosition, searchRadius, mousePoints);
+		quadtree.QueryItems(mousePosition, searchRadius, searchRadiusSquared, mousePoints);
 
 		quadtree.DrawBounds(2, Colors.Green);
 		foreach (Rectangle bounds in intersectingBounds) Primitives2D.DrawRectangleLines(bounds, 1, Colors.Orange);
