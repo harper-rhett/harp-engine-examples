@@ -26,7 +26,7 @@ public class QuadtreeExample : Game
 
 	public QuadtreeExample()
 	{
-		quadtree = new(Vector2.Zero, Engine.GameWidth);
+		quadtree = new(Vector2.Zero, Engine.GameWidth, 1f);
 		foreach (int example in Enumerable.Range(0, examples))
 		{
 			Vector2 position = Generate.Vector2(0, 0, Engine.GameWidth, Engine.GameHeight);
