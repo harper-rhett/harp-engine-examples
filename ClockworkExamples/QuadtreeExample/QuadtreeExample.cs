@@ -14,9 +14,13 @@ public class QuadtreeExample : Game
 	private Quadtree<Vector2> quadtree;
 	private int examples = 1000;
 	private float searchRadius;
+	private float searchRadiusSquared;
 
 	private Vector2 mousePosition;
 	private List<Vector2> points = new();
+	private Queue<float> quadtreeMilliseconds = new();
+	private Queue<float> traditionalMilliseconds = new();
+	private const int queueSize = 120;
 
 	public QuadtreeExample()
 	{
@@ -28,11 +32,43 @@ public class QuadtreeExample : Game
 			quadtree.Add(position, position);
 		}
 		searchRadius = Engine.GameWidth / 8f;
+		searchRadiusSquared = searchRadius * searchRadius;
 	}
 
 	public override void OnUpdate()
 	{
 		mousePosition = Mouse.GamePosition;
+		UpdateQuadtree();
+		UpdateTraditional();
+	}
+
+	private void UpdateQuadtree()
+	{
+		Stopwatch stopwatch = Stopwatch.StartNew();
+		foreach (Vector2 point in points)
+		{
+			List<Vector2> intersectingPoints = quadtree.GetItemsInRadius(point, searchRadius);
+		}
+		stopwatch.Stop();
+		quadtreeMilliseconds.Enqueue(stopwatch.ElapsedMilliseconds);
+		if (quadtreeMilliseconds.Count > queueSize) quadtreeMilliseconds.Dequeue();
+	}
+
+	private void UpdateTraditional()
+	{
+		Stopwatch stopwatch = Stopwatch.StartNew();
+		foreach (Vector2 pointA in points)
+		{
+			List<Vector2> intersectingPoints = new();
+			foreach (Vector2 pointB in points)
+			{
+				float distanceSquared = Vector2.DistanceSquared(pointA, pointB);
+				if (distanceSquared < searchRadiusSquared) intersectingPoints.Add(pointB);
+			}
+		}
+		stopwatch.Stop();
+		traditionalMilliseconds.Enqueue(stopwatch.ElapsedMilliseconds);
+		if (traditionalMilliseconds.Count > queueSize) traditionalMilliseconds.Dequeue();
 	}
 
 	public override void OnDraw()
@@ -49,5 +85,7 @@ public class QuadtreeExample : Game
 		foreach (Rectangle bounds in intersectingBounds) Primitives2D.DrawRectangleLines(bounds, 1, Colors.Orange);
 		foreach (Vector2 point in points) Primitives2D.DrawCircle(point, 2, Colors.White);
 		foreach (Vector2 point in intersectingPoints) Primitives2D.DrawCircleLines(point, 4, 1, Colors.Red);
+
+		Text.DrawDebug(30, 15, $"Quad: {quadtreeMilliseconds.Average():F2}ms", $"Trad: {traditionalMilliseconds.Average():F2}");
 	}
 }
