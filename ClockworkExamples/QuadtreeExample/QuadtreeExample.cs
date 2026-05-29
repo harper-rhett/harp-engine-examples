@@ -20,7 +20,9 @@ public class QuadtreeExample : Game
 	private List<Vector2> points = new();
 	private Queue<float> quadtreeMilliseconds = new();
 	private Queue<float> traditionalMilliseconds = new();
-	private const int queueSize = 120;
+	private const int queueSize = 2500;
+	private List<Vector2> quadtreePoints = new();
+	private List<Vector2> traditionalPoints = new();
 
 	public QuadtreeExample()
 	{
@@ -47,7 +49,8 @@ public class QuadtreeExample : Game
 		Stopwatch stopwatch = Stopwatch.StartNew();
 		foreach (Vector2 point in points)
 		{
-			List<Vector2> intersectingPoints = quadtree.GetItemsInRadius(point, searchRadius);
+			quadtreePoints.Clear();
+			quadtree.CollectItemsInRadius(point, searchRadius, quadtreePoints);
 		}
 		stopwatch.Stop();
 		quadtreeMilliseconds.Enqueue(stopwatch.ElapsedMilliseconds);
@@ -59,11 +62,11 @@ public class QuadtreeExample : Game
 		Stopwatch stopwatch = Stopwatch.StartNew();
 		foreach (Vector2 pointA in points)
 		{
-			List<Vector2> intersectingPoints = new();
+			traditionalPoints.Clear();
 			foreach (Vector2 pointB in points)
 			{
 				float distanceSquared = Vector2.DistanceSquared(pointA, pointB);
-				if (distanceSquared < searchRadiusSquared) intersectingPoints.Add(pointB);
+				if (distanceSquared < searchRadiusSquared) traditionalPoints.Add(pointB);
 			}
 		}
 		stopwatch.Stop();
@@ -78,13 +81,15 @@ public class QuadtreeExample : Game
 		Primitives2D.DrawCircle(mousePosition, 2, Colors.Blue);
 		Primitives2D.DrawCircleLines(mousePosition, searchRadius, 2, Colors.Blue);
 
-		List<Rectangle> intersectingBounds = quadtree.GetBoundsIntersectingRadius(mousePosition, searchRadius);
-		List<Vector2> intersectingPoints = quadtree.GetItemsInRadius(mousePosition, searchRadius);
+		List<Rectangle> intersectingBounds = new();
+		quadtree.CollectBoundsIntersectingRadius(mousePosition, searchRadius, intersectingBounds);
+		List<Vector2> mousePoints = new();
+		quadtree.CollectItemsInRadius(mousePosition, searchRadius, mousePoints);
 
 		quadtree.DrawBounds(2, Colors.Green);
 		foreach (Rectangle bounds in intersectingBounds) Primitives2D.DrawRectangleLines(bounds, 1, Colors.Orange);
 		foreach (Vector2 point in points) Primitives2D.DrawCircle(point, 2, Colors.White);
-		foreach (Vector2 point in intersectingPoints) Primitives2D.DrawCircleLines(point, 4, 1, Colors.Red);
+		foreach (Vector2 point in mousePoints) Primitives2D.DrawCircleLines(point, 4, 1, Colors.Red);
 
 		Text.DrawDebug(30, 15, $"Quad: {quadtreeMilliseconds.Average():F2}ms", $"Trad: {traditionalMilliseconds.Average():F2}");
 	}
