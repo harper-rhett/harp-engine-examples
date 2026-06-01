@@ -50,7 +50,7 @@ internal class CelestialBody : PolygonShape
 
 	public override void OnUpdate()
 	{
-		Transform.LocalRotation += 10 * Engine.FrameTime;
+		Transform.LocalRotation += 10 * FrameTime;
 	}
 
 	public override void OnDraw()

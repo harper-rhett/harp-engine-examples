@@ -4,6 +4,10 @@ using Clockwork.Graphics.Cameras;
 using Clockwork.Shapes;
 using System.Numerics;
 
+// Hey, you! Listen!
+
+// There is no shader example yet! This example is a WORK IN PROGRESS.
+
 public class ShaderExample : Game
 {
 	private Scene scene = new();
