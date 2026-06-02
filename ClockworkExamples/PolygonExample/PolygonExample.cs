@@ -10,6 +10,7 @@ public class PolygonExample : Game
 
 	public PolygonExample()
 	{
+		Engine.ScreenshotCommands = true;
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
 		scene.Camera = new Camera2D();

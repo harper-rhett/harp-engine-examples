@@ -1,4 +1,5 @@
 ﻿using Clockwork;
+using Clockwork.Graphics;
 using Clockwork.UI;
 
 // Hey! This example is unfinished.
@@ -7,11 +8,16 @@ using Clockwork.UI;
 
 public class UIExample : Game
 {
-	Scene scene;
+	private Scene scene;
 
 	public UIExample()
 	{
-		scene = new([new Button()]);
+		scene = new(Colors.Black);
+
+		Container mainContainer = scene.AddEntity(new Container());
+		mainContainer.BackgroundColor = Colors.Clear;
+		mainContainer.Padding = 15;
+		mainContainer.AddChild(scene.AddEntity(new Button()));
 	}
 
 	public override void OnUpdate()
