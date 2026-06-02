@@ -1,6 +1,4 @@
-﻿using Clockwork.Graphics;
-using Clockwork.Shapes;
-using System.Numerics;
+﻿using Clockwork.Shapes;
 
 internal class CircleCollider : CircleShape, ICollider
 {
@@ -8,21 +6,15 @@ internal class CircleCollider : CircleShape, ICollider
 	public bool IsSelected { get; set; }
 	public bool IsCollidedWith { get; set; }
 
-	public Vector2 Position
-	{
-		get => Transform.WorldPosition;
-		set => Transform.WorldPosition = value;
-	}
-
-	public CircleCollider(CollisionScene collisionScene, float radius) : base(radius, Colors.Blue)
+	public CircleCollider(CollisionScene collisionScene, float radius) : base(radius, CollisionScene.StaticColor)
 	{
 		this.collisionScene = collisionScene;
 	}
 
 	public override void OnUpdate()
 	{
-		if (IsSelected) Color = IsSelected ? Colors.Green : Colors.Blue;
-		else Color = IsCollidedWith ? Colors.SkyBlue : Colors.Blue;
+		if (IsSelected) Color = IsSelected ? CollisionScene.SelectedCollisionColor : CollisionScene.StaticColor;
+		else Color = IsCollidedWith ? CollisionScene.StaticCollisionColor : CollisionScene.StaticColor;
 	}
 
 	public bool IsColliding(out ICollider otherCollider)
@@ -37,7 +29,7 @@ internal class CircleCollider : CircleShape, ICollider
 			isCollision = isCollision || doesCollide;
 			if (doesCollide) otherCollider = collider;
 		}
-		Color = isCollision ? Colors.Green : Colors.Lime;
+		Color = isCollision ? CollisionScene.SelectedCollisionColor : CollisionScene.SelectedColor;
 		return isCollision;
 	}
 }

@@ -1,7 +1,7 @@
 <Project>
 	<PropertyGroup>
-		<UseLocalEngine>false</UseLocalEngine>
-		<LocalEnginePath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkEngine.csproj</LocalEnginePath>
+		<UseLocalEngine>true</UseLocalEngine>
+		<ClockworkEnginePath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkEngine\ClockworkEngine.csproj</ClockworkEnginePath>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(UseLocalEngine)' == 'false'">
@@ -9,6 +9,6 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(UseLocalEngine)' == 'true'">
-		<ProjectReference Include="$(LocalEnginePath)" />
+		<ProjectReference Include="$(ClockworkEnginePath)" />
 	</ItemGroup>
 </Project>

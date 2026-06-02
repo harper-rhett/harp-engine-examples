@@ -3,15 +3,17 @@ using Clockwork.Windowing;
 using Clockwork.Graphics;
 using Clockwork.Shapes;
 using System.Numerics;
+using Clockwork.Graphics.Text;
+using Clockwork.Graphics.Cameras;
 
-internal class OrbitsExample : Game
+public class OrbitsExample : Game
 {
 	Scene scene = new();
 
 	public OrbitsExample()
 	{
 		Window.SetResizable(true);
-		Window.SetRendererUnclipped(Colors.DarkGray);
+		WindowRenderer.SetUnclipped(Colors.DarkGray);
 		scene.Camera = scene.AddEntity(new Camera2D());
 
 		CelestialBody sun = scene.AddEntity(new CelestialBody(75, Colors.Orange));
@@ -48,7 +50,7 @@ internal class CelestialBody : PolygonShape
 
 	public override void OnUpdate()
 	{
-		Transform.LocalRotation += 10 * Engine.FrameTime;
+		Transform.LocalRotation += 10 * FrameTime;
 	}
 
 	public override void OnDraw()
