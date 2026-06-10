@@ -1,4 +1,4 @@
 ﻿using Clockwork;
 
-Engine.Initialize("UI Example", 500, 500);
+Engine.Initialize("UI Example", 1000, 500);
 Engine.Start(new UIExample());
