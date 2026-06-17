@@ -1,5 +1,6 @@
 ﻿using Clockwork.Shapes;
 using System.Numerics;
+using Clockwork.Intersections;
 
 internal interface ICollider : IIntersectsWithRectangle, IIntersectsWithCircle, IIntersectsWithLine
 {
