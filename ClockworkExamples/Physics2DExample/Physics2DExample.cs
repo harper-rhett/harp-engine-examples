@@ -13,7 +13,7 @@ public class Physics2DExample : Game
 	public Physics2DExample()
 	{
 		WorldDef worldDef = new();
-		//worldDef.Gravity = new Vector2(0, 980);
+		worldDef.Gravity = new Vector2(0, 980);
 		world = new(worldDef);
 
 		groundShape = CreateBox(BodyType.Static, new Vector2(500, 650), 750, 25);
