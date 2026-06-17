@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIExample", "UIExample\UIEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadtreeExample", "QuadtreeExample\QuadtreeExample.csproj", "{6AE603DA-6E22-4D88-AAFC-87BA38E59253}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Physics2DExample", "Physics2DExample\Physics2DExample.csproj", "{A5C2DAC7-1757-47F5-9DD4-E4DD23AB1B0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{6AE603DA-6E22-4D88-AAFC-87BA38E59253}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AE603DA-6E22-4D88-AAFC-87BA38E59253}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AE603DA-6E22-4D88-AAFC-87BA38E59253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C2DAC7-1757-47F5-9DD4-E4DD23AB1B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C2DAC7-1757-47F5-9DD4-E4DD23AB1B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C2DAC7-1757-47F5-9DD4-E4DD23AB1B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C2DAC7-1757-47F5-9DD4-E4DD23AB1B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
