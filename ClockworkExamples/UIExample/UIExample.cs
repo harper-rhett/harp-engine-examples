@@ -18,19 +18,21 @@ public class UIExample : Game
 		mainContainer.BackgroundColor = Colors.Clear;
 		mainContainer.Padding = 25;
 
+		InitializeLeft(mainContainer);
+		InitializeRight(mainContainer);
+
+		// Add to panel
+		Panel panel = scene.AddEntity(new Panel(mainContainer, DrawContext.Game));
+	}
+
+	private void InitializeLeft(Container mainContainer)
+	{
 		// Create left container
 		VerticalStackContainer leftContainer = new();
 		mainContainer.AddChild(leftContainer);
 		leftContainer.BackgroundColor = Colors.Green;
 		leftContainer.Spacing = 25;
 		leftContainer.Padding = 25;
-
-		// Create right container
-		VerticalStackContainer rightContainer = new();
-		mainContainer.AddChild(rightContainer);
-		rightContainer.BackgroundColor = Colors.Red;
-		rightContainer.Spacing = 25;
-		rightContainer.Padding = 25;
 
 		// Play button
 		Button playButton = new();
@@ -49,9 +51,19 @@ public class UIExample : Game
 		settingsButton.AddChild(settingsText);
 		settingsText.HorizontalAlignment = HorizontalAlignment.Center;
 		settingsText.VerticalAlignment = VerticalAlignment.Center;
+	}
 
-		// Add to panel
-		Panel panel = scene.AddEntity(new Panel(mainContainer, DrawContext.Game));
+	private void InitializeRight(Container mainContainer)
+	{
+		// Create right container
+		Container rightContainer = new();
+		mainContainer.AddChild(rightContainer);
+		rightContainer.BackgroundColor = Colors.Red;
+		rightContainer.Padding = 25;
+
+		// Create text
+		TextElement text = new("This is what UI currently looks like!");
+		rightContainer.AddChild(text);
 	}
 
 	public override void OnUpdate()
