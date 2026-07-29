@@ -8,7 +8,7 @@ public class OptionsMenuScene : Scene
 	private UIExample uiExample;
 	private VerticalStackContainer rootContainer;
 	private TextToggle fullscreenToggle;
-	private Slider volumeSlider;
+	private HorizontalTextSlider volumeSlider;
 	private TextButton backButton;
 
 	public OptionsMenuScene(UIExample uiExample) : base(Colors.Gray)
@@ -25,7 +25,10 @@ public class OptionsMenuScene : Scene
 		rootContainer = new VerticalStackContainer
 		{
 			BackgroundColor = Colors.Clear,
-			Padding = 50,
+			PaddingTop = 50,
+			PaddingBottom = 50,
+			PaddingLeft = 150,
+			PaddingRight = 150,
 			Spacing = 25
 		};
 
@@ -42,8 +45,8 @@ public class OptionsMenuScene : Scene
 
 	private void CreateVolumeSlider()
 	{
-		volumeSlider = new();
-		volumeSlider.ValueChanged += (value) => Console.WriteLine($"Volume Updated: {value}");
+		volumeSlider = new("VOLUME (0.50)");
+		volumeSlider.ValueChanged += OnVolumeSliderChanged;
 		rootContainer.AddChild(volumeSlider);
 	}
 
@@ -52,6 +55,11 @@ public class OptionsMenuScene : Scene
 		backButton = new("BACK");
 		backButton.Released += uiExample.CloseOptions;
 		rootContainer.AddChild(backButton);
+	}
+
+	private void OnVolumeSliderChanged(float value)
+	{
+		volumeSlider.Text = $"VOLUME ({value:F2})";
 	}
 
 	public void Dispose()
