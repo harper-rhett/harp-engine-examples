@@ -26,7 +26,10 @@ public class MainMenuScene : Scene, IDisposable
 		rootContainer = new VerticalStackContainer
 		{
 			BackgroundColor = Colors.Clear,
-			Padding = 50,
+			PaddingTop = 50,
+			PaddingBottom = 50,
+			PaddingLeft = 150,
+			PaddingRight = 150,
 			Spacing = 25
 		};
 
