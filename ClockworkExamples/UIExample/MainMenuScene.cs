@@ -4,7 +4,7 @@ using Clockwork.UI;
 using Clockwork.Windowing;
 using System;
 
-public class MainMenuScene : Scene
+public class MainMenuScene : Scene, IDisposable
 {
 	private UIExample uiExample;
 	private VerticalStackContainer rootContainer;
@@ -12,7 +12,7 @@ public class MainMenuScene : Scene
 	private TextButton optionsButton;
 	private TextButton exitButton;
 
-	public MainMenuScene(UIExample uiExample)
+	public MainMenuScene(UIExample uiExample) : base(Colors.Gray)
 	{
 		this.uiExample = uiExample;
 		CreateContainer();
@@ -51,7 +51,14 @@ public class MainMenuScene : Scene
 	private void CreateExitButton()
 	{
 		exitButton = new("EXIT");
-		exitButton.Released += () => Environment.Exit(0);
+		exitButton.Released += uiExample.Exit;
 		rootContainer.AddChild(exitButton);
+	}
+
+	public void Dispose()
+	{
+		playButton.Released -= uiExample.Play;
+		optionsButton.Released -= uiExample.OpenOptions;
+		exitButton.Released -= uiExample.Exit;
 	}
 }
