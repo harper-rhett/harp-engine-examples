@@ -1,19 +1,22 @@
 ﻿using Clockwork;
 using Clockwork.Graphics;
 using Clockwork.UI;
+using System;
 
 public class OptionsMenuScene : Scene
 {
 	private UIExample uiExample;
 	private VerticalStackContainer rootContainer;
-	private TextButton backButton;
 	private TextToggle fullscreenToggle;
+	private Slider volumeSlider;
+	private TextButton backButton;
 
 	public OptionsMenuScene(UIExample uiExample) : base(Colors.Gray)
 	{
 		this.uiExample = uiExample;
 		CreateContainer();
 		CreateFullscreenToggle();
+		CreateVolumeSlider();
 		CreateBackButton();
 	}
 
@@ -30,13 +33,18 @@ public class OptionsMenuScene : Scene
 		panel.HorizontalAlignment = HorizontalAlignment.Center;
 	}
 
-	// Need to add slider
-
 	private void CreateFullscreenToggle()
 	{
-		fullscreenToggle = new TextToggle("FULLSCREEN");
-		fullscreenToggle.Toggled += uiExample.SetFullscreen;
+		fullscreenToggle = new("FULLSCREEN");
+		fullscreenToggle.ValueChanged += uiExample.SetFullscreen;
 		rootContainer.AddChild(fullscreenToggle);
+	}
+
+	private void CreateVolumeSlider()
+	{
+		volumeSlider = new();
+		volumeSlider.ValueChanged += (value) => Console.WriteLine($"Volume Updated: {value}");
+		rootContainer.AddChild(volumeSlider);
 	}
 
 	private void CreateBackButton()
