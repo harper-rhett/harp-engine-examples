@@ -1,4 +1,4 @@
-﻿using Clockwork;
+using Clockwork;
 using Clockwork.Graphics.Text;
 using Clockwork.Windowing;
 using System;

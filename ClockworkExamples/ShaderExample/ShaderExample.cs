@@ -1,4 +1,4 @@
-﻿using Clockwork;
+using Clockwork;
 using Clockwork.Graphics;
 using Clockwork.Graphics.Cameras;
 using Clockwork.Shapes;
