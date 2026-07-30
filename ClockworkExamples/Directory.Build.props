@@ -1,6 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<UseLocalEngine>true</UseLocalEngine>
+		<UseLocalEngine>false</UseLocalEngine>
 		<ClockworkEnginePath>..\..\..\clockwork-engine\ClockworkEngine\ClockworkEngine\ClockworkEngine.csproj</ClockworkEnginePath>
 	</PropertyGroup>
 
