@@ -1,7 +1,6 @@
 ﻿using Clockwork;
 using Clockwork.Graphics;
 using Clockwork.UI;
-using System;
 
 public class OptionsMenuScene : Scene
 {
@@ -45,8 +44,7 @@ public class OptionsMenuScene : Scene
 
 	private void CreateVolumeSlider()
 	{
-		volumeSlider = new("VOLUME (0.50)");
-		volumeSlider.ValueChanged += OnVolumeSliderChanged;
+		volumeSlider = new("VOLUME");
 		rootContainer.AddChild(volumeSlider);
 	}
 
@@ -55,11 +53,6 @@ public class OptionsMenuScene : Scene
 		backButton = new("BACK");
 		backButton.Released += uiExample.CloseOptions;
 		rootContainer.AddChild(backButton);
-	}
-
-	private void OnVolumeSliderChanged(float value)
-	{
-		volumeSlider.Text = $"VOLUME ({value:F2})";
 	}
 
 	public void Dispose()
