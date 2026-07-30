@@ -1,17 +1,15 @@
 ﻿using Clockwork;
 using Clockwork.Graphics;
-using Clockwork.Input;
-using Clockwork.Shapes;
-using Clockwork.Utilities;
 using Clockwork.Windowing;
 
-internal class CollisionExample : Game
+public class CollisionExample : Game
 {
-	private CollisionScene collisionScene = new();
+	private CollisionScene collisionScene;
 
 	public CollisionExample()
 	{
-		Window.SetRendererUnclipped(Colors.Gray);
+		collisionScene = new();
+		WindowRenderer.SetUnclipped(Colors.Gray);
 		Window.SetResizable(true);
 	}
 
@@ -23,5 +21,10 @@ internal class CollisionExample : Game
 	public override void OnDraw()
 	{
 		collisionScene.Draw();
+	}
+
+	public override void OnDrawGUI()
+	{
+		collisionScene.DrawGUI();
 	}
 }
