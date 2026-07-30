@@ -28,6 +28,11 @@ public class FireworksExample : Game
 	{
 		scene.Draw();
 	}
+
+	public override void OnDrawGUI()
+	{
+		scene.DrawGUI();
+	}
 }
 
 internal class FireworkLauncher : FireTimer

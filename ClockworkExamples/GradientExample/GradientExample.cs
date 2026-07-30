@@ -36,4 +36,9 @@ public class GradientExample : Game
 			Primitives2D.DrawLine(x + 1, 0, x + 1, Engine.GameHeight, 1, color);
 		}
 	}
+
+	public override void OnDrawGUI()
+	{
+		
+	}
 }
