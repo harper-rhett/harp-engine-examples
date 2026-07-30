@@ -6,11 +6,11 @@ using System.Numerics;
 using Clockwork.Graphics.Text;
 using Clockwork.Graphics.Cameras;
 
-public class OrbitsExample : Game
+public class TransformsExample : Game
 {
 	Scene scene = new();
 
-	public OrbitsExample()
+	public TransformsExample()
 	{
 		Window.SetResizable(true);
 		WindowRenderer.SetUnclipped(Colors.DarkGray);
@@ -35,6 +35,11 @@ public class OrbitsExample : Game
 	public override void OnDraw()
 	{
 		scene.Draw();
+	}
+
+	public override void OnDrawGUI()
+	{
+		scene.DrawGUI();
 	}
 }
 

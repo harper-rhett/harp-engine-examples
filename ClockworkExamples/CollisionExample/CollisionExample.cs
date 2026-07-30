@@ -22,4 +22,9 @@ public class CollisionExample : Game
 	{
 		collisionScene.Draw();
 	}
+
+	public override void OnDrawGUI()
+	{
+		collisionScene.DrawGUI();
+	}
 }

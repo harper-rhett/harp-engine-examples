@@ -33,4 +33,9 @@ public class PolygonExample : Game
 	{
 		scene.Draw();
 	}
+
+	public override void OnDrawGUI()
+	{
+		scene.DrawGUI();
+	}
 }

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolygonExample", "PolygonEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireworksExample", "FireworksExample\FireworksExample.csproj", "{3D83CDFE-E1AF-435A-A54B-794E7663A485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitsExample", "OrbitsExample\OrbitsExample.csproj", "{0D6A1A7B-8199-4898-ABBE-313433DA1E1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformsExample", "TransformsExample\TransformsExample.csproj", "{0D6A1A7B-8199-4898-ABBE-313433DA1E1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradientExample", "GradientExample\GradientExample.csproj", "{0B4848F1-98F8-44EA-9418-2F59A45BDEE4}"
 EndProject

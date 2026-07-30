@@ -35,4 +35,9 @@ public class Primitives3DExample : Game
 	{
 		scene.Draw();
 	}
+
+	public override void OnDrawGUI()
+	{
+		scene.DrawGUI();
+	}
 }

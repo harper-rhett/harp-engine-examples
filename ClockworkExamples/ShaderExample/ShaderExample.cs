@@ -30,4 +30,9 @@ public class ShaderExample : Game
 	{
 		scene.Draw();
 	}
+
+	public override void OnDrawGUI()
+	{
+		scene.Draw();
+	}
 }

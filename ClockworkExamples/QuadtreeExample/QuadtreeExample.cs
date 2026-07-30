@@ -91,6 +91,11 @@ public class QuadtreeExample : Game
 		foreach (Vector2 point in points) Primitives2D.DrawCircle(point, 2, Colors.White);
 		foreach (Vector2 point in mousePoints) Primitives2D.DrawCircleLines(point, 4, 1, Colors.Red);
 
-		Text.DrawDebug(30, 15, $"Quad: {quadtreeMilliseconds.Average():F2}ms", $"Trad: {traditionalMilliseconds.Average():F2}");
+		Text.DrawDebug(30, Colors.White, $"Quad: {quadtreeMilliseconds.Average():F2}ms", $"Trad: {traditionalMilliseconds.Average():F2}");
+	}
+
+	public override void OnDrawGUI()
+	{
+		
 	}
 }

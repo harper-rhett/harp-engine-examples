@@ -5,9 +5,12 @@ using Clockwork.Graphics.Draw2D;
 using Clockwork.Graphics;
 using System;
 using Clockwork.Utilities;
+using Clockwork.Input;
 
 // HughPH.Box2D is the recommended library for 2D physics.
 // A physics engine my be built into Clockwork Engine in the future.
+
+// NOTE: Should add ability to drag cube around.
 
 public class Physics2DExample : Game
 {
@@ -16,6 +19,7 @@ public class Physics2DExample : Game
 	private Shape groundShape;
 	private Body boxBody;
 	private Shape boxShape;
+	private bool isPaused;
 
 	public Physics2DExample()
 	{
@@ -43,7 +47,8 @@ public class Physics2DExample : Game
 
 	public override void OnUpdate()
 	{
-		world.Step(1f / 60f, 4);
+		if (Keyboard.IsKeyPressed(KeyboardKey.Space)) isPaused = !isPaused;
+		if (!isPaused) world.Step(1f / 60f, 4);
 	}
 
 	public override void OnDraw()
